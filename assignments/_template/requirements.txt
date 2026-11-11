@@ -1,6 +1,0 @@
-# Python packages this assignment needs. Add or remove lines as needed.
-jupyter
-python-dotenv
-numpy
-pandas
-matplotlib
