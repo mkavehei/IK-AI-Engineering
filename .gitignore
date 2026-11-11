@@ -1,0 +1,44 @@
+# Secrets: API keys live only in .env files on your own computer
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large data and models: keep small samples only (GitHub rejects files over 100 MB)
+*.zip
+*.tar
+*.tar.gz
+*.parquet
+*.h5
+*.hdf5
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.bin
+*.onnx
+*.gguf
+chroma_db/
+faiss_index/
+**/data/raw/
+**/data/full/
+
+# System and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
