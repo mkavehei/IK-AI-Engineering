@@ -9,5 +9,4 @@ Each assignment is in its own folder. Open the notebook inside to see the code, 
 | # | Assignment | Topic |
 |---|------------|-------|
 | 01 | [The Autonomous IT Support Agent](assignments/01-the-autonomous-it-support-agent/) | Agentic AI Foundations & Reflex Agents |
-| 02 | [Multi-Agent Research Assistant](assignments/02-multi-agent-research-assistant/) | Multi-agent systems |
 <!-- ASSIGNMENTS-TABLE (new rows are added above this line by tools/new_assignment.sh) -->
