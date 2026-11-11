@@ -10,8 +10,7 @@ Each assignment has its own folder with a README that explains the task, how to 
 
 | #   | Assignment | Topic | Status |
 | --- | ---------- | ----- | ------ |
-
-| 01 | [The Autonomous IT Support Agent](assignments/01-the-autonomous-it-support-agent/) | Agentic AI Foundations & Reflex Agents | In progress |
+| 01 | [The Autonomous IT Support Agent](assignments/01-the-autonomous-it-support-agent/) | Agentic AI Foundations & Reflex Agents | Done |
 <!-- ASSIGNMENTS-TABLE (new rows are added above this line by tools/new_assignment.sh) -->
 
 ## How this repository is organized

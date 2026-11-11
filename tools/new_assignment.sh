@@ -18,7 +18,10 @@ if ls -d assignments/${num}-* >/dev/null 2>&1; then
 fi
 
 cp -R assignments/_template "$dir"
-sed -i.bak -e "s/^# NN — Assignment title/# ${num} — ${title}/" -e "s/^\*\*Topic:\*\* .*/**Topic:** ${topic}  /" -e "s/^\*\*Date:\*\* YYYY-MM-DD/**Date:** $(date +%Y-%m-%d)  /" "$dir/README.md"
+# Make the title and topic safe to use in sed (characters like & and / have special meaning there)
+esc() { printf '%s' "$1" | sed -e 's/[\/&|]/\\&/g'; }
+title_s=$(esc "$title"); topic_s=$(esc "$topic")
+sed -i.bak -e "s/^# NN — Assignment title/# ${num} — ${title_s}/" -e "s/^\*\*Topic:\*\* .*/**Topic:** ${topic_s}  /" -e "s/^\*\*Date:\*\* YYYY-MM-DD/**Date:** $(date +%Y-%m-%d)  /" "$dir/README.md"
 rm -f "$dir/README.md.bak"
 
 row="| ${num} | [${title}](${dir}/) | ${topic} | In progress |"
