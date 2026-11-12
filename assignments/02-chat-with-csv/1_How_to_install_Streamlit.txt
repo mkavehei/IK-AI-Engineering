@@ -1,0 +1,73 @@
+HOW TO INSTALL AND RUN STREAMLIT (Mac)
+======================================
+
+Project folder:
+~/Documents/MyActivitiesGithub/MyAIEngineering/Hello-Agent
+
+
+FIRST TIME ONLY (setup)
+-----------------------
+Open Terminal and paste these one at a time:
+
+1. Go to the project folder
+   cd ~/Documents/MyActivitiesGithub/MyAIEngineering/Hello-Agent
+
+2. Turn off Anaconda for this window  ("(base)" disappears)
+   conda deactivate
+
+3. Create the project's private box of add-ons (.venv)
+   /usr/local/bin/python3 -m venv .venv
+
+4. Switch the box on  (line must start with "(.venv)")
+   source .venv/bin/activate
+
+5. Update the installer
+   pip install --upgrade pip
+
+6. Install Streamlit and the other add-ons from the course list
+   pip install -r requirements.txt
+
+7. Check that the right Streamlit is used
+   (must end with: MyAIEngineering/Hello-Agent/.venv/bin/streamlit)
+   which streamlit
+
+8. Run the app  (press Enter if it asks for an email)
+   streamlit run app.py
+
+
+EVERY NEXT TIME (no install needed)
+-----------------------------------
+   cd ~/Documents/MyActivitiesGithub/MyAIEngineering/Hello-Agent
+   conda deactivate
+   source .venv/bin/activate
+   streamlit run app.py
+
+To run the practice app instead:
+   streamlit run app_v2.py
+
+
+USEFUL TO KNOW
+--------------
+- The app opens in the browser at:  http://localhost:8501
+- Stop the app:  click in Terminal and press  Ctrl + C
+- Keep the Terminal open while using the app. Closing it stops the app.
+- The API key is pasted only into the app's page in the browser,
+  never into a file and never into a chat.
+- Do not click "Deploy" in the app. It tries to publish it online.
+
+
+COMMON PROBLEMS
+---------------
+- Error "No module named streamlit.cli" or wrong path in "which streamlit"
+  -> Anaconda's Streamlit is running. Do steps 2 and 4 again.
+
+- "No such file or directory" for .venv
+  -> The .venv was never created in this folder. Do steps 3 to 6.
+
+- "Error code: 401 ... platform.openai.com"
+  -> The key went to OpenAI instead of OpenRouter. Check that app.py has
+     base_url="https://openrouter.ai/api/v1" and is saved, then restart the app.
+
+- Browser says "localhost refused to connect"
+  -> The app is not running yet. Check Terminal (maybe it is waiting
+     for the email question; press Enter).
